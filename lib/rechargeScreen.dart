@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import 'blocs/RechargeBloc.dart';
+import '../blocs/RechargeBloc.dart';
 class RechargeHistory extends StatefulWidget {
   const RechargeHistory({Key key}) : super(key: key);
 
