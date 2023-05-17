@@ -1,0 +1,134 @@
+{
+  "project_info": {
+    "project_number": "796843996647",
+    "project_id": "monorail-app-6ab3d",
+    "storage_bucket": "monorail-app-6ab3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796843996647:android:854ee6c83c96b1075b7942",
+        "android_client_info": {
+          "package_name": "com.ETS.ets_grad_proj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796843996647-28lkfahaemhrv9oqctjkmo8eq42h92dq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ETS.ets_grad_proj",
+            "certificate_hash": "3ec01fb6484d8da79441f121fde434dbddc1d866"
+          }
+        },
+        {
+          "client_id": "796843996647-qruinbl3kv9p4pb0if4b18g9tgibu03t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVVlRiYY_b20588mML-1-ZYR_qE_c50W4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796843996647-mb4ht0utr0k39c1t9n93f542ndt76dqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796843996647:android:a7e7bca882a3451d5b7942",
+        "android_client_info": {
+          "package_name": "com.acu.monorail_mobile_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796843996647-qruinbl3kv9p4pb0if4b18g9tgibu03t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVVlRiYY_b20588mML-1-ZYR_qE_c50W4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796843996647-mb4ht0utr0k39c1t9n93f542ndt76dqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796843996647:android:1378d40521a964f85b7942",
+        "android_client_info": {
+          "package_name": "com.acu.scanner_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796843996647-qruinbl3kv9p4pb0if4b18g9tgibu03t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVVlRiYY_b20588mML-1-ZYR_qE_c50W4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796843996647-mb4ht0utr0k39c1t9n93f542ndt76dqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796843996647:android:b4f8a2ff11445f3f5b7942",
+        "android_client_info": {
+          "package_name": "com.example.reservations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796843996647-qruinbl3kv9p4pb0if4b18g9tgibu03t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVVlRiYY_b20588mML-1-ZYR_qE_c50W4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796843996647-mb4ht0utr0k39c1t9n93f542ndt76dqp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
