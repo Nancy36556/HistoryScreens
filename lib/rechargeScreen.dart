@@ -1,68 +1,39 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_firebase_pagination/blocs/bloc/recharge_bloc.dart';
+import 'Model/Recharge.dart';
 
-import '../blocs/RechargeBloc.dart';
-class RechargeHistory extends StatefulWidget {
-  const RechargeHistory({Key key}) : super(key: key);
 
-  @override
-  State<RechargeHistory> createState() => _RechargeHistoryState();
-}
-
-class _RechargeHistoryState extends State<RechargeHistory> { 
-  RechargeListBloc rechargeListBloc;
- 
-  ScrollController controller = ScrollController();
- @override
-  void initState() {
-    super.initState();
-    rechargeListBloc = RechargeListBloc();
-    rechargeListBloc.fetchFirstList();
-    controller.addListener(_scrollListener);
-  }
+class RechargeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // final bloc = BlocProvider.of<TripsBloc>(context);
+
     return Scaffold(
-       appBar: AppBar(title: Center(child: Text("Recharge history")),
-       backgroundColor: Colors.green,),
-      body: StreamBuilder<List<DocumentSnapshot>>(
-        stream: rechargeListBloc.DataStream,
-        builder: (context, snapshot) {
-          if (snapshot.data != null) {
+      appBar: AppBar(
+        title: Center(child: Text('History Charges')),
+      ),
+      body: BlocBuilder<RechargeBloc, RechargeState>(
+        // ignore: missing_return
+        builder: (context, State) {
+          if (State is LoadinRechargegstate) {
+            return Center(child: Text('Loading...'));
+          } else if (State is LoadedRechargestate) {
+            List<Recharge> data = State.recharge;
+
             return ListView.builder(
-              itemCount: snapshot.data.length,
-              shrinkWrap: true,
-              controller: controller,
-              itemBuilder: (context, index) {
-                return Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ListTile(
-                      title:  Column(
-                        children: [
-                          Text(snapshot.data[index]["amount"]),
-                          Text(snapshot.data[index]["paymentMethod"]),
+              itemBuilder: (_, index) {
+                return Column(
+                  children: [
+                      Text(data[index].amount),
+                      Text(data[index].paymentMethod)
                         ],
-                      ),
-                    ),
-                  ),
                 );
               },
             );
-          } else {
-            return CircularProgressIndicator();
           }
         },
       ),
     );
   }
-
-  void _scrollListener() {
-    if (controller.offset >= controller.position.maxScrollExtent &&
-        !controller.position.outOfRange) {
-      print("at the end of list");
-      rechargeListBloc.fetchNext();
-    }
-  }
 }
-  
